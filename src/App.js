@@ -39,8 +39,6 @@ function App() {
         {
           windowLoading
           ?<button
-          ref={startButton}
-          onClick={handlePlay}
           >Please wait
         </button>
         :<button
