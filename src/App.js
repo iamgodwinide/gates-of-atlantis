@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRef } from 'react';
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   const preloadWrap = useRef();
   const startButton = useRef();
   const overlay = useRef();
+  const [windowLoading, setWindowLoading] = useState(true);
 
   const handleTwwet = () => {
     const key = (Math.random()*100000).toString(36);
@@ -28,14 +29,26 @@ function App() {
     // bgAudio.current.play();
   }
 
+  useEffect(()=> {
+    window.onload = () => setWindowLoading(false);
+  },[])
+
   return (
     <div className='main'>
       <div className="preloader" ref={preloadWrap}>
-        <button
+        {
+          windowLoading
+          ?<button
+          ref={startButton}
+          onClick={handlePlay}
+          >Please wait
+        </button>
+        :<button
           ref={startButton}
           onClick={handlePlay}
           >Click To Start
         </button>
+        }
         <audio 
           src='/sirena_buildup_loopable.wav' 
           ref={audio}
