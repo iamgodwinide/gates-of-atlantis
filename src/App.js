@@ -53,6 +53,7 @@ function App() {
           src='/sirena_buildup_loopable.wav' 
           ref={audio}
           onEnded={handleEnd}
+          loop
           preload='auto'
         />
         <audio 
