@@ -12,6 +12,6 @@ app.use("*", (req, res) => {
     res.sendFile(path.join(__dirname, "build/index.html"))
 })
 
-const PORT = 6959;
+const PORT = 7676;
 
 app.listen(PORT, () => console.log(`server start on port ${PORT}`));
