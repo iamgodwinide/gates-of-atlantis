@@ -30,7 +30,7 @@ function App() {
   }
 
   useEffect(()=> {
-    window.onload = () => setWindowLoading(false);
+    window.onload = () => setTimeout(()=> setWindowLoading(false), 3000);
   },[])
 
   return (
@@ -53,13 +53,13 @@ function App() {
           src='/sirena_buildup_loopable.wav' 
           ref={audio}
           onEnded={handleEnd}
-          loop
+          loop='true'
           preload='auto'
         />
         <audio 
           src='/sirena_buildup_loopable.wav.wav' 
           ref={bgAudio}
-          loop
+          loop='true'
           preload='auto'
         />
         <div className='overlay' ref={overlay}/>
