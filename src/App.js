@@ -11,7 +11,7 @@ function App() {
 
   const handleTwwet = () => {
     const key = (Math.random()*100000).toString(26);
-    const tweet = `•˚ I’m searching for the Gates of Atlantis. •˚%0A%0A•˚ @LegendOfSirena has given the key ${key} •˚`;
+    const tweet = `•˚I’m searching for the Gates of Atlantis. •˚%0A%0A•˚@LegendOfSirena has given the key ${key}•˚%0A%0A`;
     window.open(`https://twitter.com/intent/tweet?text=${tweet}&url=${"https://legendofsirena.xyz"}`, '_blank');
   }
 
@@ -64,7 +64,7 @@ function App() {
         
       </div>
       <button onClick={handleTwwet}>
-        Enter the Golden Age
+        Click to call for Sirena
       </button>
     </div>
   )
