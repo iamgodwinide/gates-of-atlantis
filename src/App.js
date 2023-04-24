@@ -48,7 +48,7 @@ function App() {
         </button>
         }
         <audio 
-          src='/sirena_buildup_loopable.wav' 
+          src='/sirena_2.wav' 
           ref={audio}
           onEnded={handleEnd}
           loop='true'
