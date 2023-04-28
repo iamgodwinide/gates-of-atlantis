@@ -21,7 +21,7 @@ function App() {
     overlay.current.style.display = "none";
     setTimeout(()=> {
       handleEnd();
-    }, 10000)
+    }, 5000)
   }
 
   const handleEnd = () => {
